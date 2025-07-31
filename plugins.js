@@ -22,7 +22,6 @@ module.exports = async (on, config) => {
   // create socket even if not watching files to avoid
   // tripping up client trying to connect
   const port = await getPort({ port: 8765 })
-  console.log(`cypress-watch-and-reload: using port ${port}`)
   const wss = new WebSocket.Server({ port })
   let client // future Cypress client
 
